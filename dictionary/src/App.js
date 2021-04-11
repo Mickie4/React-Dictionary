@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./styled-components/theme";
 import { GlobalStyles } from "./styled-components/global";
-import { ToggleContainer } from "./styled-components/ToggleStyled";
-import { IconImage } from "./styled-components/styledIconImage";
-import { Input } from "./styled-components/styledForm";
+import { lightTheme, darkTheme } from "./styled-components/theme";
+import {
+  ToggleButton,
+  IconImage,
+  Header,
+  PromptText,
+} from "./styled-components/App-styling";
+import Search from "./components/Search";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -31,20 +35,16 @@ export default function App() {
       <Container className='mt-4'>
         <Row>
           <Col md={12} className='text-right'>
-            <ToggleContainer onClick={toggleTheme}>
+            <ToggleButton onClick={toggleTheme}>
               <IconImage src={icon} alt='toggle icon' />
-            </ToggleContainer>
+            </ToggleButton>
           </Col>
           <Col md={12} className='text-center mt-3'>
-            <h1 className='px-3'>React Dictionary</h1>
-            <h5>What word do you want to look up?</h5>
+            <Header className='px-3'>React Dictionary</Header>
+            <PromptText>What word do you want to look up?</PromptText>
           </Col>
         </Row>
-        <Row>
-          <Col md={12} className='d-block text-center mt-3'>
-            <Input placeholder='Search for a word'></Input>
-          </Col>
-        </Row>
+        <Search />
       </Container>
     </ThemeProvider>
   );
