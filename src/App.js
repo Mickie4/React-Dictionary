@@ -9,6 +9,7 @@ import {
   PromptText,
 } from "./styled-components/App-styling";
 import Search from "./components/Search";
+import Descriptions from "./components/Descriptions";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -45,6 +46,7 @@ export default function App() {
           </Col>
         </Row>
         <Search />
+        <Descriptions />
       </Container>
     </ThemeProvider>
   );
