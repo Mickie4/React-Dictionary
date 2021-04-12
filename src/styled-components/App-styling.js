@@ -37,6 +37,7 @@ export const PromptText = styled.h5`
 export const StyledFooter = styled.footer`
   margin-top: 250px;
   text-align: center;
+  padding-bottom: 50px;
 `;
 
 export const StyledLink = styled.a`

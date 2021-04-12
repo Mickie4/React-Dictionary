@@ -3,6 +3,7 @@ export const lightTheme = {
   primaryColor: "#FF7082",
   secondaryColor: "#A064A0",
   example: "#db7093",
+  synonyms: "#4bbc8e",
   text: "#363537",
   toggleBorder: "#A7BEE0",
   gradient:
@@ -15,6 +16,7 @@ export const darkTheme = {
   primaryColor: "#806C97",
   secondaryColor: "#EAEFFF",
   example: "#EEE8A9",
+  synonyms: "#cecece",
   text: "#FAFAFA",
   toggleBorder: "#F8D027",
   gradient:
