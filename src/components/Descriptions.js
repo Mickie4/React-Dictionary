@@ -3,6 +3,7 @@ import Meaning from "./Meaning";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Phonetics, Word } from "../styled-components/Descriptions-styling";
 
 export default function Descriptions(props) {
   console.log(props.data);
@@ -12,8 +13,8 @@ export default function Descriptions(props) {
         <Container fluid className='mt-5'>
           <Row>
             <Col md={12}>
-              <h1>{props.data.word}</h1>
-              <p>{props.data.phonetics[0].text}</p>
+              <Word>{props.data.word}</Word>
+              <Phonetics>{props.data.phonetics[0].text}</Phonetics>
               {props.data.meanings.map(function (meaning, index) {
                 return (
                   <div key={index}>

@@ -1,6 +1,8 @@
 export const lightTheme = {
   body: "#fafafa",
   primaryColor: "#FF7082",
+  secondaryColor: "#A064A0",
+  example: "#db7093",
   text: "#363537",
   toggleBorder: "#A7BEE0",
   gradient:
@@ -10,7 +12,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   body: "#333",
-  primaryColor: "#606688",
+  primaryColor: "#806C97",
+  secondaryColor: "#EAEFFF",
+  example: "#EEE8A9",
   text: "#FAFAFA",
   toggleBorder: "#F8D027",
   gradient:
