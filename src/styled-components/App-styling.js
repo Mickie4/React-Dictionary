@@ -33,3 +33,12 @@ export const PromptText = styled.h5`
   padding-top: 20px;
   font-style: oblique;
 `;
+
+export const StyledFooter = styled.footer`
+  margin-top: 250px;
+  text-align: center;
+`;
+
+export const StyledLink = styled.a`
+  color: ${({ theme }) => theme.primaryColor};
+`;

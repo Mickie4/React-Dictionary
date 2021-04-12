@@ -13,9 +13,13 @@ export default function Meaning(props) {
   return (
     <div className='meaning'>
       <Container>
-        <Title>{props.data.partOfSpeech}</Title>
-        <Paragraph>{props.data.definitions[0].definition}</Paragraph>
-        <Example>"{props.data.definitions[0].example}"</Example>
+        <Row>
+          <Col>
+            <Title>{props.data.partOfSpeech}</Title>
+            <Paragraph>{props.data.definitions[0].definition}</Paragraph>
+            <Example>"{props.data.definitions[0].example}"</Example>
+          </Col>
+        </Row>
       </Container>
     </div>
   );

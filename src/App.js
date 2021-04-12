@@ -7,6 +7,8 @@ import {
   IconImage,
   Header,
   PromptText,
+  StyledFooter,
+  StyledLink,
 } from "./styled-components/App-styling";
 import Search from "./components/Search";
 import Container from "react-bootstrap/Container";
@@ -46,6 +48,26 @@ export default function App() {
         </Row>
         <Search />
       </Container>
+      <StyledFooter>
+        {" "}
+        <small>
+          This project was coded by{" "}
+          <StyledLink
+            href='https://www.linkedin.com/in/webdev-michelle/'
+            target='_blank'
+            rel='noreferrer'>
+            Michelle Morales
+          </StyledLink>{" "}
+          and is open-sourced on{" "}
+          <StyledLink
+            href='https://github.com/Mickie4/React-Dictionary'
+            target='_blank'
+            rel='noreferrer'>
+            Github
+          </StyledLink>{" "}
+          and hosted on Netlify
+        </small>
+      </StyledFooter>
     </ThemeProvider>
   );
 }
