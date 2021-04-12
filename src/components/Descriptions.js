@@ -1,43 +1,32 @@
 import React from "react";
+import Meaning from "./Meaning";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function Descriptions() {
-  return (
-    <div className='descriptions'>
-      <Container fluid className='mt-5'>
-        <Row>
-          <Col md={12}>
-            <h1>Sunset</h1>
-            <p>/ˈsʌnsɛt/</p>
-            <ul>
-              <li>
-                noun <br />
-                <p>
-                  the time in the evening when the sun disappears or daylight
-                  fades.
-                </p>
-              </li>
-              <li>
-                adjective <br />
-                <p>
-                  denoting a legal provision under which a programme, agency,
-                  regulation, etc., is automatically terminated at the end of a
-                  fixed period unless renewed by legislative action.
-                </p>
-              </li>
-            </ul>
-            <ul>
-              <li>Similar:</li>
-              <li>nightfall</li>
-              <li>twilight</li>
-              <li>dusk</li>
-              <li>evening</li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
+export default function Descriptions(props) {
+  console.log(props.data);
+  if (props.data) {
+    return (
+      <div className='descriptions'>
+        <Container fluid className='mt-5'>
+          <Row>
+            <Col md={12}>
+              <h1>{props.data.word}</h1>
+              <p>{props.data.phonetics[0].text}</p>
+              {props.data.meanings.map(function (meaning, index) {
+                return (
+                  <div key={index}>
+                    <Meaning meaning={meaning} />
+                  </div>
+                );
+              })}
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
