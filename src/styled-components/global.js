@@ -6,5 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-family: 'Archivo', sans-serif;
     transition: all 0.25s linear;
+    margin: 0;
+    padding: 0;
   }
   `;

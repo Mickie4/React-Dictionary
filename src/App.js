@@ -33,48 +33,50 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <GlobalStyles />
-      <StyledContainer className='app-container'>
-        <StyledRow>
-          <StyledColLeft>
-            {" "}
-            <StyledBtn onClick={toggleTheme}>
-              <StyledIcon src={icon} alt='toggle icon' />
-            </StyledBtn>
-          </StyledColLeft>
-          <StyledCol>
-            <StyledHeader>React Dictionary</StyledHeader>
-            <StyledPromptText>
-              What word do you want to look up?
-            </StyledPromptText>
-          </StyledCol>
-        </StyledRow>
-        {/* Search Component */}
-        <Search />
-        <StyledRow>
-          <StyledFooter>
-            {" "}
-            <small>
-              This project was coded by{" "}
-              <StyledLink
-                href='https://www.linkedin.com/in/webdev-michelle/'
-                target='_blank'
-                rel='noreferrer'>
-                Michelle Morales
-              </StyledLink>{" "}
-              and is open-sourced on{" "}
-              <StyledLink
-                href='https://github.com/Mickie4/React-Dictionary'
-                target='_blank'
-                rel='noreferrer'>
-                Github
-              </StyledLink>{" "}
-              and hosted on Netlify
-            </small>
-          </StyledFooter>
-        </StyledRow>
-      </StyledContainer>
-    </ThemeProvider>
+    <div>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <StyledContainer className='app-container'>
+          <StyledRow>
+            <StyledColLeft>
+              {" "}
+              <StyledBtn onClick={toggleTheme}>
+                <StyledIcon src={icon} alt='toggle icon' />
+              </StyledBtn>
+            </StyledColLeft>
+            <StyledCol>
+              <StyledHeader>React Dictionary</StyledHeader>
+              <StyledPromptText>
+                What word do you want to look up?
+              </StyledPromptText>
+            </StyledCol>
+          </StyledRow>
+          {/* Search Component */}
+          <Search />
+          <StyledRow>
+            <StyledFooter>
+              {" "}
+              <small>
+                This project was coded by{" "}
+                <StyledLink
+                  href='https://www.linkedin.com/in/webdev-michelle/'
+                  target='_blank'
+                  rel='noreferrer'>
+                  Michelle Morales
+                </StyledLink>{" "}
+                and is open-sourced on{" "}
+                <StyledLink
+                  href='https://github.com/Mickie4/React-Dictionary'
+                  target='_blank'
+                  rel='noreferrer'>
+                  Github
+                </StyledLink>{" "}
+                and hosted on Netlify
+              </small>
+            </StyledFooter>
+          </StyledRow>
+        </StyledContainer>
+      </ThemeProvider>
+    </div>
   );
 }
