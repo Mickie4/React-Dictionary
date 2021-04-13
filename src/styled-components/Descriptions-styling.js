@@ -11,8 +11,10 @@ export const StyledRow = styled.div`
 export const StyledCol = styled.div`
   position: relative;
   width: 100%;
-  padding-right: 15px;
   padding-left: 15px;
+  @media (min-width: 1024px) {
+    padding-left: -5px;
+  }
 `;
 
 export const StyledWord = styled.h1`

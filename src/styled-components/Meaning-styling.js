@@ -22,6 +22,5 @@ export const Section = styled.div`
   margin: 20px 0;
   border: 1px solid ${({ theme }) => theme.section.border};
   box-shadow: ${({ theme }) => theme.section.boxShadow};
-  position: relative;
   width: 100%;
 `;

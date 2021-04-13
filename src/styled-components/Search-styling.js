@@ -3,8 +3,7 @@ export const StyledContainer = styled.div`
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 `;
 
 export const StyledCol = styled.div`
@@ -17,7 +16,6 @@ export const StyledRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px;
   margin-top: 15px;
 `;
 
@@ -25,7 +23,6 @@ export const Section = styled.div`
   background: ${({ theme }) => theme.section.background};
   border-radius: 8px;
   padding: 5px;
-  margin: 15px;
   border: 1px solid ${({ theme }) => theme.section.border};
   box-shadow: ${({ theme }) => theme.section.boxShadow};
   width: 100%;
