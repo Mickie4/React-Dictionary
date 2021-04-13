@@ -68,11 +68,6 @@ export const StyledHeader = styled.h1`
   } ;
 `;
 
-export const StyledPromptText = styled.h5`
-  padding-top: 20px;
-  font-style: oblique;
-`;
-
 export const StyledFooter = styled.footer`
   margin-top: 250px;
   text-align: center;

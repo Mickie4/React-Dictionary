@@ -6,7 +6,6 @@ import {
   StyledBtn,
   StyledIcon,
   StyledHeader,
-  StyledPromptText,
   StyledFooter,
   StyledLink,
   StyledContainer,
@@ -46,9 +45,6 @@ export default function App() {
             </StyledColLeft>
             <StyledCol>
               <StyledHeader>React Dictionary</StyledHeader>
-              <StyledPromptText>
-                What word do you want to look up?
-              </StyledPromptText>
             </StyledCol>
           </StyledRow>
           {/* Search Component */}
