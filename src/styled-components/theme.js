@@ -10,7 +10,10 @@ export const lightTheme = {
     boxShadow: "0 30px 50px rgb(65 50 100 / 8%);",
   },
   text: "#363537",
-  toggleBorder: "#A7BEE0",
+  toggleBtn: {
+    background: "#ffe4e6",
+    border: "#FF7082",
+  },
   gradient:
     "linear-gradient(to top, #030303, #0d0d0d, #141414, #1a1a1a, #202020)",
   background: "#fafafa",
@@ -28,7 +31,10 @@ export const darkTheme = {
   example: "#806C97",
   synonyms: "#cecece",
   text: "#FAFAFA",
-  toggleBorder: "#F8D027",
+  toggleBtn: {
+    background: "#333",
+    border: "#806C97",
+  },
   gradient:
     "linear-gradient(to top, #030303, #0d0d0d, #141414, #1a1a1a, #202020)",
   background: "#333",

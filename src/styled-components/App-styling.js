@@ -39,8 +39,8 @@ export const StyledColLeft = styled.div`
 `;
 
 export const StyledBtn = styled.button`
-  background: #333;
-  border: 1px solid ${({ theme }) => theme.toggleBorder};
+  background: ${({ theme }) => theme.toggleBtn.background};;
+  border: 2px solid ${({ theme }) => theme.toggleBtn.border};
   border-radius: 30px;
   cursor: pointer;
   font-size: 1em;
