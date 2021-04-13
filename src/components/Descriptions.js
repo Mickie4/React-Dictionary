@@ -1,12 +1,12 @@
 import React from "react";
 import Meaning from "./Meaning";
+import ImageGrid from "./ImagesGrid";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Phonetics, Word } from "../styled-components/Descriptions-styling";
 
 export default function Descriptions(props) {
-  console.log(props.data);
   if (props.data) {
     return (
       <div className='descriptions'>
@@ -23,6 +23,9 @@ export default function Descriptions(props) {
                 );
               })}
             </Col>
+          </Row>
+          <Row>
+            <ImageGrid images={props.images} />
           </Row>
         </Container>
       </div>

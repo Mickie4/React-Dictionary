@@ -7,12 +7,12 @@ import {
   Title,
   Paragraph,
   Example,
+  Section,
 } from "../styled-components/Meaning-styling";
 
 export default function Meaning(props) {
-  console.log(props);
   return (
-    <div className='meaning'>
+    <Section className='meaning'>
       <Container>
         <Row>
           <Col>
@@ -23,6 +23,6 @@ export default function Meaning(props) {
           </Col>
         </Row>
       </Container>
-    </div>
+    </Section>
   );
 }

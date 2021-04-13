@@ -7,6 +7,11 @@ import axios from "axios";
 export default function Search() {
   const [keyword, setKeyword] = useState("null");
   const [dictionaryData, setDictionaryData] = useState(null);
+  const [imagesData, setImagesData] = useState(null);
+
+  function handleImagesResponse(response) {
+    setImagesData(response.data.photos);
+  }
 
   function showResults(response) {
     setDictionaryData(response.data[0]);
@@ -16,6 +21,13 @@ export default function Search() {
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(showResults);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000014e51b8f2262f470ab9ebbbfad12ff71f";
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6&size=small`;
+    axios
+      .get(pexelsUrl, { headers: { Authorization: `Bearer ${pexelsApiKey}` } })
+      .then(handleImagesResponse);
   }
 
   function handleKeyword(event) {
@@ -36,7 +48,7 @@ export default function Search() {
           </form>
         </Col>
       </Row>
-      <Descriptions data={dictionaryData} />
+      <Descriptions data={dictionaryData} images={imagesData} />
     </div>
   );
 }
