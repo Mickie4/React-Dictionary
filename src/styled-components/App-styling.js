@@ -1,6 +1,46 @@
 import styled from "styled-components";
 
-export const ToggleButton = styled.button`
+export const StyledContainer = styled.div`
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+`;
+
+export const StyledRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+`;
+
+export const StyledCol = styled.div`
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+`;
+
+export const StyledColLeft = styled.div`
+  position: relative;
+  width: 100%;
+  padding-right: 275px;
+  padding-left: 15px;
+  text-align: right;
+  @media (max-width: 768px) {
+    padding-right: 160px;
+  }
+  @media (max-width: 425px) {
+    padding-right: 20px;
+  }
+  @media (min-width: 1025px) {
+    padding-right: 360px;
+  }
+`;
+
+export const StyledBtn = styled.button`
   background: #333;
   border: 1px solid ${({ theme }) => theme.toggleBorder};
   border-radius: 30px;
@@ -12,16 +52,17 @@ export const ToggleButton = styled.button`
    padding: 3px 0;
   position: relative;
   width: 50px;
-  margin-bottom: 30px;
+  margin: 20px 10px;
+
   }
 `;
 
-export const IconImage = styled.img`
+export const StyledIcon = styled.img`
   height: 20px;
   width: 20px;
 `;
 
-export const Header = styled.h1`
+export const StyledHeader = styled.h1`
   font-weight: 600;
   word-spacing: 5px;
   @media (max-width: 778px) {
@@ -29,7 +70,7 @@ export const Header = styled.h1`
   } ;
 `;
 
-export const PromptText = styled.h5`
+export const StyledPromptText = styled.h5`
   padding-top: 20px;
   font-style: oblique;
 `;

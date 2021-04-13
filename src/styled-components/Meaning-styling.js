@@ -16,11 +16,12 @@ export const Example = styled.p`
 `;
 
 export const Section = styled.div`
-  background: rgb(234, 239, 255);
   background: ${({ theme }) => theme.section.background};
   border-radius: 8px;
-  padding: 10px;
-  margin: 20px;
+  padding: 10px 15px;
+  margin: 20px 0;
   border: 1px solid ${({ theme }) => theme.section.border};
   box-shadow: ${({ theme }) => theme.section.boxShadow};
+  position: relative;
+  width: 100%;
 `;

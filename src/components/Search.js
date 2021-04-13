@@ -1,18 +1,25 @@
 import React, { useState } from "react";
-import { Input, SearchBtn } from "../styled-components/Search-styling";
+import {
+  StyledInput,
+  StyledBtn,
+  StyledCol,
+  StyledContainer,
+  StyledRow,
+  Section,
+  StyledForm,
+} from "../styled-components/Search-styling";
 import Descriptions from "./Descriptions";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import axios from "axios";
 export default function Search() {
   const [keyword, setKeyword] = useState("null");
   const [dictionaryData, setDictionaryData] = useState(null);
   const [imagesData, setImagesData] = useState(null);
 
+  //Pexels API's response
   function handleImagesResponse(response) {
     setImagesData(response.data.photos);
   }
-
+  //Dictionary API's response
   function showResults(response) {
     setDictionaryData(response.data[0]);
   }
@@ -30,25 +37,27 @@ export default function Search() {
       .then(handleImagesResponse);
   }
 
+  //Here its where the keyword is defined
   function handleKeyword(event) {
     setKeyword(event.target.value);
   }
   return (
-    <div className='search'>
+    <StyledContainer className='search'>
       {" "}
-      <Row>
-        <Col md={12} className='d-block text-center mt-3'>
-          <form onSubmit={search} className='d-inline-block'>
-            <Input
-              placeholder='Search for a word'
-              type='search'
-              autoFocus={true}
-              onChange={handleKeyword}></Input>
-            <SearchBtn>Search</SearchBtn>
-          </form>
-        </Col>
-      </Row>
+      <StyledRow>
+        <Section>
+          <StyledCol>
+            <StyledForm onSubmit={search}>
+              <StyledInput
+                placeholder='Search for a word'
+                type='search'
+                onChange={handleKeyword}></StyledInput>
+              <StyledBtn>Search</StyledBtn>
+            </StyledForm>
+          </StyledCol>
+        </Section>
+      </StyledRow>
       <Descriptions data={dictionaryData} images={imagesData} />
-    </div>
+    </StyledContainer>
   );
 }

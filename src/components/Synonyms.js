@@ -1,21 +1,24 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import { StyledList } from "../styled-components/Synonyms-styling";
+import {
+  StyledList,
+  StyledRow,
+  StyledContainer,
+} from "../styled-components/Synonyms-styling";
 
 export default function Synonyms(props) {
   if (props.synonyms) {
     return (
-      <Row>
-        <ul className='synonyms d-inline'>
+      <StyledRow>
+        <StyledContainer>
           {props.synonyms.map(function (synonym, index) {
             return (
-              <StyledList key={index} className='d-inline p-2'>
-                {synonym}
-              </StyledList>
+              <div>
+                <StyledList key={index}>{synonym}</StyledList>
+              </div>
             );
           })}
-        </ul>
-      </Row>
+        </StyledContainer>
+      </StyledRow>
     );
   } else {
     return null;

@@ -3,17 +3,18 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styled-components/global";
 import { lightTheme, darkTheme } from "./styled-components/theme";
 import {
-  ToggleButton,
-  IconImage,
-  Header,
-  PromptText,
+  StyledBtn,
+  StyledIcon,
+  StyledHeader,
+  StyledPromptText,
   StyledFooter,
   StyledLink,
+  StyledContainer,
+  StyledRow,
+  StyledCol,
+  StyledColLeft,
 } from "./styled-components/App-styling";
 import Search from "./components/Search";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import sunIcon from "./icons/sun.png";
 import moonIcon from "./icons/moon.png";
 
@@ -34,40 +35,46 @@ export default function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <Container className='mt-4'>
-        <Row>
-          <Col md={12} className='text-right'>
-            <ToggleButton onClick={toggleTheme}>
-              <IconImage src={icon} alt='toggle icon' />
-            </ToggleButton>
-          </Col>
-          <Col md={12} className='text-center mt-3'>
-            <Header className='px-3'>React Dictionary</Header>
-            <PromptText>What word do you want to look up?</PromptText>
-          </Col>
-        </Row>
+      <StyledContainer className='app-container'>
+        <StyledRow>
+          <StyledColLeft>
+            {" "}
+            <StyledBtn onClick={toggleTheme}>
+              <StyledIcon src={icon} alt='toggle icon' />
+            </StyledBtn>
+          </StyledColLeft>
+          <StyledCol>
+            <StyledHeader>React Dictionary</StyledHeader>
+            <StyledPromptText>
+              What word do you want to look up?
+            </StyledPromptText>
+          </StyledCol>
+        </StyledRow>
+        {/* Search Component */}
         <Search />
-      </Container>
-      <StyledFooter>
-        {" "}
-        <small>
-          This project was coded by{" "}
-          <StyledLink
-            href='https://www.linkedin.com/in/webdev-michelle/'
-            target='_blank'
-            rel='noreferrer'>
-            Michelle Morales
-          </StyledLink>{" "}
-          and is open-sourced on{" "}
-          <StyledLink
-            href='https://github.com/Mickie4/React-Dictionary'
-            target='_blank'
-            rel='noreferrer'>
-            Github
-          </StyledLink>{" "}
-          and hosted on Netlify
-        </small>
-      </StyledFooter>
+        <StyledRow>
+          <StyledFooter>
+            {" "}
+            <small>
+              This project was coded by{" "}
+              <StyledLink
+                href='https://www.linkedin.com/in/webdev-michelle/'
+                target='_blank'
+                rel='noreferrer'>
+                Michelle Morales
+              </StyledLink>{" "}
+              and is open-sourced on{" "}
+              <StyledLink
+                href='https://github.com/Mickie4/React-Dictionary'
+                target='_blank'
+                rel='noreferrer'>
+                Github
+              </StyledLink>{" "}
+              and hosted on Netlify
+            </small>
+          </StyledFooter>
+        </StyledRow>
+      </StyledContainer>
     </ThemeProvider>
   );
 }
