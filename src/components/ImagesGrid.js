@@ -1,22 +1,22 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import { ImageGrid } from "../styled-components/ImagesGrid-styling";
 
 export default function ImagesGrid(props) {
   if (props.images) {
     return (
-      <Col className='text-center'>
+      <Row>
         {props.images.map(function (image, index) {
           return (
-            <ImageGrid
-              src={image.src.tiny}
-              alt='related to the search'
-              className='p-1'
-              key={index}
-            />
+            <Col key={index} md={4}>
+              <a href={image.src.original} target='_blank' rel='noreferrer'>
+                <ImageGrid src={image.src.tiny} alt='related to the search' />
+              </a>
+            </Col>
           );
         })}
-      </Col>
+      </Row>
     );
   } else {
     return null;

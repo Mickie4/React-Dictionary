@@ -38,7 +38,7 @@ export default function Search() {
       {" "}
       <Row>
         <Col md={12} className='d-block text-center mt-3'>
-          <form onSubmit={search}>
+          <form onSubmit={search} className='d-inline-block'>
             <Input
               placeholder='Search for a word'
               type='search'

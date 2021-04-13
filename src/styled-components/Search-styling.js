@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const StyledForm = styled.form`
+display: inline-block;
+margin-left: 0;
+margin right: 0;
+text-align: left;
+`;
+
 export const Input = styled.input`
   border-radius: 5px;
   border: 2px solid ${({ theme }) => theme.primaryColor};

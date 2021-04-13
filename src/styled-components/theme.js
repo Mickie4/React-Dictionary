@@ -1,14 +1,13 @@
 export const lightTheme = {
-  body: "#fafafa",
+  body: "#ffe4e6",
   primaryColor: "#FF7082",
   secondaryColor: "#A064A0",
   example: "#db7093",
-  synonyms: "#648CF6",
+  synonyms: "#A45CA8",
   section: {
-    background:
-      "linear-gradient(151deg,rgba(234, 239, 255, 1) 34%,rgba(208, 213, 252, 1) 100%)",
-    border: "none",
-    boxShadow: "0 10px 6px -6px #777",
+    background: "#fafafa",
+    border: "#ffe4e6",
+    boxShadow: "0 30px 50px rgb(65 50 100 / 8%);",
   },
   text: "#363537",
   toggleBorder: "#A7BEE0",
@@ -26,7 +25,7 @@ export const darkTheme = {
     border: "#fafafa",
     boxShadow: "none",
   },
-  example: "#D0D5FC",
+  example: "#806C97",
   synonyms: "#cecece",
   text: "#FAFAFA",
   toggleBorder: "#F8D027",

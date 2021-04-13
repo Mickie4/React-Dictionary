@@ -1,10 +1,15 @@
 import React from "react";
 import Meaning from "./Meaning";
 import ImageGrid from "./ImagesGrid";
+import Phonetics from "./Phonetics";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Phonetics, Word } from "../styled-components/Descriptions-styling";
+import {
+  StyledParagraph,
+  Word,
+} from "../styled-components/Descriptions-styling";
+import { Section } from "../styled-components/Meaning-styling";
 
 export default function Descriptions(props) {
   if (props.data) {
@@ -13,8 +18,13 @@ export default function Descriptions(props) {
         <Container fluid className='mt-5'>
           <Row>
             <Col md={12}>
-              <Word>{props.data.word}</Word>
-              <Phonetics>{props.data.phonetics[0].text}</Phonetics>
+              <Section>
+                <Word>{props.data.word}</Word>
+                <StyledParagraph>
+                  {props.data.phonetics[0].text}
+                </StyledParagraph>
+                <Phonetics audios={props.data.phonetics} />
+              </Section>
               {props.data.meanings.map(function (meaning, index) {
                 return (
                   <div key={index}>
@@ -24,10 +34,10 @@ export default function Descriptions(props) {
               })}
             </Col>
           </Row>
-          <Row>
-            <ImageGrid images={props.images} />
-          </Row>
         </Container>
+        <Section>
+          <ImageGrid images={props.images} />
+        </Section>
       </div>
     );
   } else {
