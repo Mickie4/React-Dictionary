@@ -12,8 +12,8 @@ export default function Synonyms(props) {
         <StyledContainer>
           {props.synonyms.map(function (synonym, index) {
             return (
-              <div>
-                <StyledList key={index}>{synonym}</StyledList>
+              <div key={index}>
+                <StyledList>{synonym}</StyledList>
               </div>
             );
           })}
