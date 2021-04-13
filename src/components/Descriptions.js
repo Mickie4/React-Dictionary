@@ -7,6 +7,8 @@ import {
   StyledCol,
   StyledWord,
   Section,
+  StyledFooter,
+  StyledLink,
 } from "../styled-components/Descriptions-styling";
 
 export default function Descriptions(props) {
@@ -32,6 +34,25 @@ export default function Descriptions(props) {
           })}
         </StyledCol>
         <ImageGrid images={props.images} />
+        <StyledCol>
+          <StyledFooter>
+            This project was coded by{" "}
+            <StyledLink
+              href='https://www.linkedin.com/in/webdev-michelle/'
+              target='_blank'
+              rel='noreferrer'>
+              Michelle Morales
+            </StyledLink>{" "}
+            and is open-sourced on{" "}
+            <StyledLink
+              href='https://github.com/Mickie4/React-Dictionary'
+              target='_blank'
+              rel='noreferrer'>
+              GitHub
+            </StyledLink>{" "}
+            and hosted on Netlify
+          </StyledFooter>
+        </StyledCol>
       </StyledRow>
     );
   } else {

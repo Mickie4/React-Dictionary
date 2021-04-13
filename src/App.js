@@ -6,8 +6,6 @@ import {
   StyledBtn,
   StyledIcon,
   StyledHeader,
-  StyledFooter,
-  StyledLink,
   StyledContainer,
   StyledRow,
   StyledCol,
@@ -49,28 +47,6 @@ export default function App() {
           </StyledRow>
           {/* Search Component */}
           <Search />
-          <StyledRow>
-            <StyledFooter>
-              {" "}
-              <small>
-                This project was coded by{" "}
-                <StyledLink
-                  href='https://www.linkedin.com/in/webdev-michelle/'
-                  target='_blank'
-                  rel='noreferrer'>
-                  Michelle Morales
-                </StyledLink>{" "}
-                and is open-sourced on{" "}
-                <StyledLink
-                  href='https://github.com/Mickie4/React-Dictionary'
-                  target='_blank'
-                  rel='noreferrer'>
-                  Github
-                </StyledLink>{" "}
-                and hosted on Netlify
-              </small>
-            </StyledFooter>
-          </StyledRow>
         </StyledContainer>
       </ThemeProvider>
     </div>

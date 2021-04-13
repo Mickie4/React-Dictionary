@@ -9,8 +9,8 @@ export const StyledContainer = styled.div`
 export const StyledRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin: 0 auto;
+  text-align: center;
 `;
 
 export const StyledCol = styled.div`
@@ -66,14 +66,4 @@ export const StyledHeader = styled.h1`
   @media (max-width: 778px) {
     font-size: 2.2em;
   } ;
-`;
-
-export const StyledFooter = styled.footer`
-  margin-top: 250px;
-  text-align: center;
-  padding-bottom: 50px;
-`;
-
-export const StyledLink = styled.a`
-  color: ${({ theme }) => theme.primaryColor};
 `;
