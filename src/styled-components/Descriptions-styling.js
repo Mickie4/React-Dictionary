@@ -33,15 +33,3 @@ export const Section = styled.div`
   border: 1px solid ${({ theme }) => theme.section.border};
   box-shadow: ${({ theme }) => theme.section.boxShadow};
 `;
-
-export const StyledFooter = styled.footer`
-  margin-top: 50px;
-  text-align: center;
-  padding-bottom: 10px;
-  text-align: center;
-`;
-
-export const StyledLink = styled.a`
-  color: ${({ theme }) => theme.primaryColor};
-  text-decoration: none;
-`;

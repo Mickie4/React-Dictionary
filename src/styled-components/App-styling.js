@@ -67,3 +67,15 @@ export const StyledHeader = styled.h1`
     font-size: 2.2em;
   } ;
 `;
+
+export const StyledFooter = styled.footer`
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 10px;
+  text-align: center;
+`;
+
+export const StyledLink = styled.a`
+  color: ${({ theme }) => theme.primaryColor};
+  text-decoration: none;
+`;
