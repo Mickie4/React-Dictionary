@@ -8,7 +8,6 @@ import {
 } from "../styled-components/ImagesGrid-styling";
 
 export default function ImagesGrid(props) {
-  console.log(props);
   if (props.images) {
     return (
       <Section>
