@@ -16,10 +16,17 @@ export default function Descriptions(props) {
         <StyledCol>
           <Section>
             <StyledWord>{props.data.word}</StyledWord>
-            <Phonetics
-              audios={props.data.phonetics}
-              text={props.data.phonetics[0].text}
-            />
+
+            {props.data.phonetics.map(function (audio, index) {
+              return (
+                <div key={index}>
+                  <Phonetics
+                    audios={audio}
+                    text={props.data.phonetics[0].text}
+                  />
+                </div>
+              );
+            })}
           </Section>
         </StyledCol>
         <StyledCol>

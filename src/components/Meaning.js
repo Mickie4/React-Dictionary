@@ -13,6 +13,7 @@ export default function Meaning(props) {
       <Title>{props.data.partOfSpeech}</Title>
       <Paragraph>{props.data.definitions[0].definition}</Paragraph>
       <Synonyms synonyms={props.data.definitions[0].synonyms} />
+      <br />
       Example: <Example>"{props.data.definitions[0].example}"</Example>
     </Section>
   );

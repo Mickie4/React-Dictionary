@@ -8,6 +8,7 @@ import {
 } from "../styled-components/ImagesGrid-styling";
 
 export default function ImagesGrid(props) {
+  console.log(props);
   if (props.images) {
     return (
       <Section>
@@ -18,7 +19,7 @@ export default function ImagesGrid(props) {
                 <GridContainer key={index} className='key'>
                   <a href={image.src.original} target='_blank' rel='noreferrer'>
                     <ImageGrid
-                      src={image.src.tiny}
+                      src={image.src.landscape}
                       alt='related to the search'
                     />
                   </a>
